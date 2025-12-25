@@ -7,7 +7,7 @@ defaultContentLanguage: "vi"
 enableRobotsTXT: true
 
 pagination:
-  pagerSize: 6
+  pagerSize: 8
 
 buildDrafts: false
 buildFuture: false
@@ -20,18 +20,18 @@ outputs:
   home:
     - HTML
     - RSS
-    - JSON   # cần cho search của PaperMod
+    - JSON
 
 params:
   env: production
 
-  # Thông tin SEO cơ bản
+  # SEO
   title: "Nhật Duy Blog"
   description: "Blog cá nhân chia sẻ lập trình mạng, Java và JavaScript (tiếng Việt)."
-  keywords: ["Lập trình mạng", "Java", "JavaScript", "Socket", "TCP", "UDP", "RMI", "HTTP", "Web"]
+  keywords: ["Lập trình mạng", "Java", "JavaScript", "Socket", "TCP", "UDP", "RMI", "HTTP"]
   author: "Nhật Duy"
 
-  # Giao diện tối giản
+  # Giao diện
   defaultTheme: auto
   disableThemeToggle: false
   ShowReadingTime: true
@@ -40,33 +40,33 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowRssButtonInSectionTermList: true
-  disableSpecial1stPost: true   # tối giản: không làm nổi bài đầu
+  disableSpecial1stPost: true
   hidemeta: false
   hideSummary: false
 
-  # Trang chủ: Profile cá nhân (đúng yêu cầu "giới thiệu profile")
+  # Profile Mode
   profileMode:
     enabled: true
     title: "Xin chào, mình là Nhật Duy 👋"
     subtitle: "Sinh viên HUTECH | Blog chia sẻ Lập trình mạng + Java + JavaScript"
-    imageUrl: "img/anhdaidien.png"   
+    imageUrl: "img/anhdaidien.png"
     imageWidth: 140
     imageHeight: 140
     imageTitle: "Nhat Duy"
     buttons:
       - name: "Blog"
-        url: "blog/"
+        url: "/blog/"
       - name: "Giới thiệu"
-        url: "about/"
+        url: "/about/"
 
   # Social
   socialIcons:
     - name: github
-      url: "https://github.com/YOUR-USERNAME"
+      url: "https://github.com/duyle27"
     - name: email
-      url: "mailto:YOURMAIL@gmail.com"
+      url: "mailto:nhatduy@example.com"
 
-  # Search (PaperMod)
+  # Search
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
@@ -98,9 +98,9 @@ menu:
       url: /about/
       weight: 50
 
-# Highlight code đẹp cho bài lập trình
-pygmentsUseClasses: true
+# Highlight code
 markup:
   highlight:
-    noClasses: false
+    style: monokai
     lineNos: true
+    codeFences: true
